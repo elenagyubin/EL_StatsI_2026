@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.12)  7 OCT 2026 23:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.12)  8 OCT 2026 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**PS01_answersJZ.tex
-(./PS01_answersJZ.tex
+**PS01_answers_EGL.tex
+(./PS01_answers_EGL.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -782,55 +782,27 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@cntb=\count351
 \multirow@dima=\skip66
 \bigstrutjot=\dimen313
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen314
-\captionmargin=\dimen315
-\caption@leftmargin=\dimen316
-\caption@rightmargin=\dimen317
-\caption@width=\dimen318
-\caption@indent=\dimen319
-\caption@parindent=\dimen320
-\caption@hangindent=\dimen321
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count352
-\c@continuedfloat=\count353
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count354
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count355
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count356
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count352
 \lst@gtempboxa=\box76
 \lst@token=\toks53
-\lst@length=\count357
-\lst@currlwidth=\dimen322
-\lst@column=\count358
-\lst@pos=\count359
-\lst@lostspace=\dimen323
-\lst@width=\dimen324
-\lst@newlines=\count360
-\lst@lineno=\count361
-\lst@maxwidth=\dimen325
+\lst@length=\count353
+\lst@currlwidth=\dimen314
+\lst@column=\count354
+\lst@pos=\count355
+\lst@lostspace=\dimen315
+\lst@width=\dimen316
+\lst@newlines=\count356
+\lst@lineno=\count357
+\lst@maxwidth=\dimen317
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count362
-\lst@skipnumbers=\count363
+\c@lstnumber=\count358
+\lst@skipnumbers=\count359
 \lst@framebox=\box77
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
@@ -844,12 +816,13 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
+\c@hyp=\count360
 (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count364
+\l__color_backend_stack_int=\count361
 )
-(./PS01_answersJZ.aux)
-\openout1 = `PS01_answersJZ.aux'.
+(./PS01_answers_EGL.aux)
+\openout1 = `PS01_answers_EGL.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -872,16 +845,16 @@ LaTeX Font Info:    ... okay on input line 67.
 
 (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count365
-\scratchdimen=\dimen326
+\scratchcounter=\count362
+\scratchdimen=\dimen318
 \scratchbox=\box78
-\nofMPsegments=\count366
-\nofMParguments=\count367
+\nofMPsegments=\count363
+\nofMParguments=\count364
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count368
-\MPscratchDim=\dimen327
-\MPnumerator=\count369
-\makeMPintoPDFobject=\count370
+\MPscratchCnt=\count365
+\MPscratchDim=\dimen319
+\MPnumerator=\count366
+\makeMPintoPDFobject=\count367
 \everyMPtoPDFconversion=\toks55
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -907,16 +880,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package xypdf Info: Line width: 0.47998pt on input line 67.
 Package hyperref Info: Link coloring OFF on input line 67.
 
-(./PS01_answersJZ.out) (./PS01_answersJZ.out)
+(./PS01_answers_EGL.out) (./PS01_answers_EGL.out)
 \@outlinefile=\write7
-\openout7 = `PS01_answersJZ.out'.
+\openout7 = `PS01_answers_EGL.out'.
 
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: listings package is loaded.
-Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count371
+\c@lstlisting=\count368
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
@@ -930,84 +900,150 @@ File: lstlang2.sty 2025/11/14 1.11b listings language file
 File: lstlang3.sty 2025/11/14 1.11b listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 78.
+nput line 82.
 
-(./PS01_answersJZ.R
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-0.
+(./PS01_answers_EGL.R
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
+8.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 40.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 38.
 )
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-88.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 88.
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
 
 
-LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 88.
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
-(./PS01_answersJZ.R) [1
+ []
+
+(./PS01_answers_EGL.R)
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+[1
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<plot_example.pdf, id=25, 505.89pt x 505.89pt>
-File: plot_example.pdf Graphic file (type pdf)
-<use plot_example.pdf>
-Package pdftex.def Info: plot_example.pdf  used on input line 119.
-(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
- (./PS01_answersJZ.R [2 <./plot_example.pdf>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-1.
+(./PS01_answers_EGL.R)
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
-)
-(./regression_output1.tex) [3] (./PS01_answersJZ.aux)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
+
+ []
+
+(./PS01_answers_EGL.R) [2] (./PS01_answers_EGL.R)
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+[3]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 158.
+ (./PS01_answers_EGL.R) (./PS01_answers_EGL.R) (./PS01_answers_EGL.R
+[4])
+<Relationships_1.pdf, id=71, 722.7pt x 542.025pt>
+File: Relationships_1.pdf Graphic file (type pdf)
+<use Relationships_1.pdf>
+Package pdftex.def Info: Relationships_1.pdf  used on input line 190.
+(pdftex.def)             Requested size: 399.29463pt x 299.47104pt.
+ (./PS01_answers_EGL.R)
+<Relationships_2.pdf, id=72, 722.7pt x 542.025pt>
+File: Relationships_2.pdf Graphic file (type pdf)
+<use Relationships_2.pdf>
+Package pdftex.def Info: Relationships_2.pdf  used on input line 200.
+(pdftex.def)             Requested size: 399.29463pt x 299.47104pt.
+ [5 <./Relationships_1.pdf>] (./PS01_answers_EGL.R)
+<Correlation_Plot.pdf, id=96, 505.89pt x 505.89pt>
+File: Correlation_Plot.pdf Graphic file (type pdf)
+<use Correlation_Plot.pdf>
+Package pdftex.def Info: Correlation_Plot.pdf  used on input line 212.
+(pdftex.def)             Requested size: 399.29463pt x 399.30135pt.
+
+[6 <./Relationships_2.pdf>] (./PS01_answers_EGL.R) (./PS01_answers_EGL.R)
+(./PS01_answers_EGL.R) [7 <./Correlation_Plot.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
+
+ []
+
+(./PS01_answers_EGL.R)
+<Box_Plot.pdf, id=131, 722.7pt x 542.025pt>
+File: Box_Plot.pdf Graphic file (type pdf)
+<use Box_Plot.pdf>
+Package pdftex.def Info: Box_Plot.pdf  used on input line 256.
+(pdftex.def)             Requested size: 399.29463pt x 299.47104pt.
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
+(./PS01_answers_EGL.R)
+<Scatter_Plot_1.pdf, id=149, 578.16pt x 361.35pt>
+File: Scatter_Plot_1.pdf Graphic file (type pdf)
+<use Scatter_Plot_1.pdf>
+Package pdftex.def Info: Scatter_Plot_1.pdf  used on input line 271.
+(pdftex.def)             Requested size: 399.29463pt x 249.55783pt.
+ [9 <./Box_Plot.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+
+ []
+
+(./PS01_answers_EGL.R)
+<Scatter_Plot_2.pdf, id=175, 578.16pt x 361.35pt>
+File: Scatter_Plot_2.pdf Graphic file (type pdf)
+<use Scatter_Plot_2.pdf>
+Package pdftex.def Info: Scatter_Plot_2.pdf  used on input line 287.
+(pdftex.def)             Requested size: 399.29463pt x 249.55783pt.
+ [10 <./Scatter_Plot_1.pdf>] [11 <./Scatter_Plot_2.pdf>]
+(./PS01_answers_EGL.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package rerunfilecheck Info: File `PS01_answersJZ.out' has not changed.
+Package rerunfilecheck Info: File `PS01_answers_EGL.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28678 strings out of 467525
- 501936 string characters out of 5418982
- 1186004 words of memory out of 5000000
- 57070 multiletter control sequences out of 15000+600000
- 638645 words of font info for 86 fonts, out of 8000000 for 9000
+ 27438 strings out of 467525
+ 477172 string characters out of 5418982
+ 1260102 words of memory out of 5000000
+ 55740 multiletter control sequences out of 15000+600000
+ 639173 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,104p,3246b,2137s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,6n,104p,3248b,2134s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
-ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
-ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texliv
-e/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on PS01_answersJZ.pdf (3 pages, 164403 bytes).
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texliv
+e/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive
+/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on PS01_answers_EGL.pdf (11 pages, 338944 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 24 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

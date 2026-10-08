@@ -1,0 +1,187 @@
+#####################
+# load libraries
+# set wd
+# clear global .envir
+#####################
+
+# remove objects
+rm(list=ls())
+
+# detach all libraries
+detachAllPackages <- function() {
+  basic.packages <- c("package:stats", "package:graphics", "package:grDevices", "package:utils", "package:datasets", "package:methods", "package:base")
+  package.list <- search()[ifelse(unlist(gregexpr("package:", search()))==1, TRUE, FALSE)]
+  package.list <- setdiff(package.list, basic.packages)
+  if (length(package.list)>0)  for (package in package.list) detach(package,  character.only=TRUE)
+}
+detachAllPackages()
+
+# load libraries
+pkgTest <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[,  "Package"])]
+  if (length(new.pkg)) 
+    install.packages(new.pkg,  dependencies = TRUE)
+  sapply(pkg,  require,  character.only = TRUE)
+}
+
+# here is where you load any necessary packages
+# ex: stringr
+# lapply(c("stringr"),  pkgTest)
+
+lapply(c("ggplot2", "stargazer", "tidyverse", "GGally"),  pkgTest)
+
+#####################
+# Problem 1
+#####################
+
+# y = data set of 25 students’ IQ scores
+y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
+
+y_mean <- mean(y)
+y_sd <- sd(y)
+y_length <- length(y)
+y_se <- y_sd / sqrt(y_length)
+
+# (1) calculating a 90% CI for the population mean IQ
+
+# this means our confidence coefficient is 0.90, leaving 5% in each tail 
+# the population SD is unknown and the sample size is small,
+# so we use the t-distribution
+t_score <- qt(0.95, df = y_length -1)
+
+lower_90_t <- y_mean - t_score * y_se
+upper_90_t <- y_mean + t_score * y_se
+lower_90_t; y_mean; upper_90_t
+
+# the counselor can be 90% confident that the population mean IQ is between 93.96 and 102.92.
+
+
+# (2) hypothesis testing
+
+# we're dealing with quantitative data from a random sample of 25
+# the population SD is unknown and the sample is relatively small,
+# so we use the t-distribution
+# with a small sample, we assume the population is approximately normal
+# this test is one-sided because we are testing whether μ > 100
+# H0: μ <= 100
+# HA: μ > 100
+
+# (2.3) test statistic
+# t = (x̄ − μ) / (s / √n).
+t_statistic <- (y_mean - 100) / (y_sd/(sqrt(y_length)))
+t_statistic
+
+# (2.4) p-value
+# we would reject H0 if p < 0.05. 
+
+t.test(y, mu = 100, alternative = "greater")
+# t = -0.59574, df = 24, p-value = 0.7215
+# our manually calculated t-statistic = -0.59574,
+# which matches the t-statistic from t.test()
+
+# (2.5) conclusion 
+# because p = 0.7215, we fail to reject the null hypothesis at α = 0.05.
+# there is insufficient evidence to conclude that the average student IQ 
+# of this school is higher than the national average of 100.
+
+
+#####################
+# Problem 2: POLITICAL ECONOMY
+#####################
+
+expenditure <- read.table("https://raw.githubusercontent.com/ASDS-TCD/StatsI_2026/main/datasets/expenditure.txt", header=T)
+head(expenditure)
+
+# cleaning up the nominal data
+expenditure$Region <- factor(expenditure$Region,
+                             levels = 1:4,
+                             labels = c("Northeast", "North Central", "South", "West"))
+
+table(expenditure$Region) # checking it labelled correctly
+
+
+# (1) plot the relationships among Y, X1, X2, and X3
+
+pdf("Relationships_1.pdf", width = 10, height = 7.5)
+par(mfrow = c(1, 3)) # three plots of Y ~ X1-3 
+  plot(expenditure$X1, expenditure$Y, xlab = "Personal Income (X1)", ylab = "Expenditure (Y)")
+  abline(lm(Y ~ X1, data = expenditure), col = "seagreen", lwd = 1.5)
+  plot(expenditure$X2, expenditure$Y, xlab = "Financially Insecure (X2)", ylab = "Expenditure (Y)")
+  abline(lm(Y ~ X2, data = expenditure), col = "seagreen", lwd = 1.5)
+  plot(expenditure$X3, expenditure$Y, xlab = "Urban Residents (X3)", ylab = "Expenditure (Y)")
+  abline(lm(Y ~ X3, data = expenditure), col = "seagreen", lwd = 1.5)
+dev.off()
+
+pdf("Relationships_2.pdf", width = 10, height = 7.5)
+par(mfrow = c(1, 3)) # relationships among the predictors
+  plot(expenditure$X2, expenditure$X1, xlab = "Financially Insecure (X2)", ylab = "Personal Income (X1)")
+  abline(lm(X1 ~ X2, data = expenditure), col = "seagreen", lwd = 1.5)
+  plot(expenditure$X3, expenditure$X1, xlab = "Urban Residents (X3)", ylab = "Personal Income (X1)")
+  abline(lm(X1 ~ X3, data = expenditure), col = "seagreen", lwd = 1.5)
+  plot(expenditure$X3, expenditure$X2, xlab = "Urban Residents (X3)", ylab = "Financially Insecure (X2)")
+  abline(lm(X2 ~ X3, data = expenditure), col = "seagreen", lwd = 1.5)
+dev.off()
+  
+par(mfrow = c(1, 1)) # reset split screen
+
+# a fun correlation plot from https://r-graph-gallery.com/
+pdf("Correlation_Plot.pdf")
+ggpairs(expenditure, columns = 2:5,
+    aes(colour = Region, alpha = 0.3),
+    columnLabels = c("Expenditure (Y)", "Income (X1)", "Insecure (X2)", "Urban (X3)")
+    )
+dev.off()
+
+cor(expenditure$Y, expenditure$X1); cor(expenditure$Y, expenditure$X2); cor(expenditure$Y, expenditure$X3)
+cor(expenditure$X1, expenditure$X2); cor(expenditure$X1, expenditure$X3)
+cor(expenditure$X2, expenditure$X3)
+
+# describe the graph and the relationships among them
+
+# (2) plot the relationship between Y and Region
+
+pdf("Box_Plot.pdf", width = 10, height = 7.5)
+ggplot(data = expenditure, aes(x = Region, y = Y)) + 
+  geom_boxplot(aes(fill = Region), alpha = 0.3) +
+  geom_jitter(colour = "black", width = 0.1, size = 1, alpha = 0.8) +
+  labs(title = "Housing Assistance Expenditure by Region",
+    subtitle = "Per Capita USD",
+    x = "Region", 
+    y = "Expenditure") +
+  stat_summary(fun = mean, geom = "point", colour = "red", size = 1) +
+  theme(legend.position="none")
+dev.off()
+
+# the west region has the highest per capita expenditure on housing assistance.
+
+# (3) plot the relationship between Y and X1
+
+pdf("Scatter_Plot_1.pdf", width = 8, height = 5)
+ggplot(data = expenditure, aes(x = X1, y = Y)) +
+  geom_point(colour = "black", size = 1.5, alpha = 0.8) +
+  geom_smooth(method = "lm", colour = "lemonchiffon", linewidth = 0.5) +
+  labs(
+    title = "Housing Assistance Expenditure and Personal Income",
+    subtitle = "Per Capita USD",
+    x = "Personal Income", 
+    y = "Expenditure")
+dev.off()
+
+# it's a simple scatter plot with a line of best fit 
+# the line and confidence band show a positive linear relationship
+
+# reproduce the above graph including one more variable, Region
+# display different regions with different types of symbols and colors
+
+pdf("Scatter_Plot_2.pdf", width = 8, height = 5)
+ggplot(data = expenditure, aes(x = X1, y = Y)) +
+  geom_point(mapping = aes(shape = Region, colour = Region)) +
+  geom_smooth(method = "lm", colour = "lemonchiffon", linewidth = 0.5) +
+  labs(
+    title = "Housing Assistance Expenditure and Personal Income",
+    subtitle = "Per Capita USD",
+    x = "Personal Income", 
+    y = "Expenditure",
+    color = "Region", shape = "Region") +
+  theme(legend.position = "inside", legend.position.inside = c(0.11, 0.78))
+dev.off()
