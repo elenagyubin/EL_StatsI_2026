@@ -74,8 +74,10 @@ sprintf("%.20f",7.52e-07)
 # -------------------------------#
 
 # Question: Is there a relationship between education and income?
+
 # Model: income = b0 + b1 * education
 summary(lm(income ~ edu, data = df))
+
 # Save model as object
 model <- lm(income~edu, data=df)
 
